@@ -83,6 +83,7 @@ def preprocess(input_path: str, output_path: str) -> pd.DataFrame:
 
 
 if __name__ == "__main__":
-    INPUT_PATH = "../heart_raw.csv"
-    OUTPUT_PATH = "./heart_preprocessing.csv"
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    INPUT_PATH = os.path.join(BASE_DIR, "..", "heart_raw.csv")
+    OUTPUT_PATH = os.path.join(BASE_DIR, "heart_preprocessing.csv")
     preprocess(INPUT_PATH, OUTPUT_PATH)
